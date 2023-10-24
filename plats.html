@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/galeria.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Benvolgut a Llorenç!</title>
+</head>
+
+<body>
+    <header>
+        <h3><u>Wiki-Penedès</u></h3>
+        <h1>Llorenç Del Penedès</h1>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Pàgina Central</a></li>
+                <li><a href="llocs.html">Llocs a Visitar</a></li>
+                <li><a class="active" href="plats.html">Plats de l'Àrea</a></li>
+                <li><a href="galeria.html">Galeria d'Imatges</a></li>
+                <li><a href="form.html">Fica't en Contacte</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h2><u>Gastronomia de Llorenç del Penedès</u></h2>
+            <div class="flex-container">
+                <div class="articlesplit">
+                    <h3 class="gastrotitles"><u>Local</u></h3>
+                    <ul>
+                        <li>Vins i Caves</li>
+                        <li>Oli d'oliva</li>
+                    </ul>
+                    <h3 class="gastrotitles"><u>Comarcal</u></h3>
+                    <ul>
+                        <li>Calçots - Valls</li>
+                        <li>Xató / Xatonada - El Vendrell</li>
+                        <li>Coques enramades - El Vendrell</li>
+                        <li>Gall del Penedès - Vilafranca</li>
+                        <li>Gambes - Vilanova</li>
+                        <li>Préssecs - Ordal</li>
+                        <li>Catànies - Vilafranca</li>
+                        <li>Carquinyolis - Sant Quintí de Mediona</li>
+                    </ul>
+                </div>
+                <div class="articlesplit">
+                    <div class="slideshow-container fadefromright">
+
+                        <div class="mySlides fade">
+                            <img src="imatges/plats1.jpg" alt="Imatge d'uns calçots">
+                            <div class="text">Calçots</div>
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="imatges/plats2.png" alt="Imatge d'uns préssecs d'ordal">
+                            <div class="text">Préssecs d'Ordal</div>
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="imatges/plats3.jpg" alt="Imatge d'unes catànies">
+                            <div class="text">Catànies</div>
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="imatges/plats4.png" alt="Imatge d'unes gambes de vilanova">
+                            <div class="text">Gambes de Vilanova</div>
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+                    </div>
+                    <br>
+                    <div class="dotsdiv">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <p>Pàgina dissenyada i codificada per: Óscar Molina Quintanilla</p>
+        <a href="https://twitter.com/_MrBoomtastic_" class="fa fa-twitter">&nbsp;</a>
+        <a href="https://docs.google.com/document/d/1YqgTriatnsr0ngJTPFR2jQ3R68VyfBjuWBWmAootc14/edit?usp=sharing"
+            class="fa fa-google">&nbsp;</a>
+    </footer>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+
+</html>
