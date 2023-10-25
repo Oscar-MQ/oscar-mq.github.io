@@ -1,0 +1,309 @@
+* {
+  box-sizing: border-box;
+  border-collapse: collapse;
+}
+
+body {
+  margin: 0;
+  background-image: url("../imatges/BodyBG.png");
+  background-color: #ceffc8;
+  background-size: 100%;
+  background-repeat: repeat;
+}
+
+header,
+footer,
+section {
+  width: 100%;
+  background-color: rgb(20, 170, 145);
+  border: 0.2vw solid teal;
+}
+
+header {
+  background-image: url("../imatges/indexheaderbg.jpg");
+  background-size: 100%;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 10vw;
+  padding-bottom: 6vw;
+  font-family: 'Monotype corsiva', 'Lucida Grande';
+  margin-bottom: 0.3vw;
+  color: #29eea6;
+  text-shadow: 8px 8px 3px #024129;
+  /* color: white;
+  text-shadow: 8px 8px 3px #04AA6D; */
+}
+
+header h3 {
+  text-align: right;
+  font-size: 2.5vw;
+  padding-top: 1.7vw;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #29eea6;
+  text-shadow: 4px 4px 1px #024129;
+  /* color: white;
+  text-shadow: 4px 4px 1px #04AA6D; */
+}
+
+h2 {
+  font-size: 3.5vw;
+  text-align: center;
+}
+
+h3 {
+  font-size: 3vw;
+  text-align: center;
+}
+
+article li {
+  font-size: 2vw;
+  margin-bottom: 0.5vw;
+  text-align: left;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav {
+  /*H*/
+  flex: 100%;
+  /*H*/
+  display: flex;
+  background-image: linear-gradient(to bottom, rgb(150, 255, 180), rgb(150, 255, 250));
+  text-align: center;
+  border: 0.1vw solid teal;
+}
+
+article {
+  /*H*/
+  flex: 100%;
+  background-color: rgb(230, 255, 240);
+  border: 0.1vw solid teal;
+  padding: 1.2vw;
+  font-size: 1.8vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  padding: 2vw;
+  font-size: 1.5vw;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+}
+
+/* Canviar sols la mida del TEXT del footer, no dels botons */
+footer p {
+  font-size: 1.8vw;
+}
+
+article a {
+  color: rgb(90, 60, 146);
+}
+
+a:hover {
+  background-color: rgb(90, 60, 146);
+  color: whitesmoke;
+}
+
+.articlesplit {
+  flex: 1;
+  /* width: 45%; */
+}
+
+.splitindex {
+  text-align: center;
+  padding: 4.5vw;
+}
+
+.splitindex img {
+  border-radius: 3vw;
+}
+
+.gastrotitles {
+  text-align: left;
+  padding-left: 3vw;
+}
+
+.inlinegallery {
+  text-align: center;
+}
+
+.inlinegallery img {
+  width: 24%;
+  height: auto;
+  border: 0.2vw solid teal;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#escuticon {
+  float: right;
+  margin-top: -1vw;
+  margin-left: 1vw;
+  opacity: 1;
+  width: 7vw;
+  
+}
+
+/* LLISTA DE NAVEGACIO */
+nav ul {
+  /*H*/
+  display: flex;
+  list-style-type: none;
+  margin: 1.2vw;
+  padding: 0;
+  /*H*/
+  width: 100%;
+  background-color: rgb(210, 230, 220);
+  font-family: 'Trebuchet MS', 'Gill Sans', sans-serif;
+  font-size: 1.8vw;
+  font-weight: bold;
+  border: 0.35vw solid teal;
+  border-radius: 1vw;
+}
+
+nav li {
+  /*H*/
+  flex: 20%;
+}
+
+nav li a {
+  /*H*/
+  width: 100%;
+  /*H*/
+  display: inline-block;
+  border: 0.15vw solid teal;
+  color: #000;
+  padding: 1vw 1.6vw;
+  text-decoration: none;
+}
+
+nav li a.active {
+  background-color: #04AA6D;
+  color: white;
+  animation: pulse 2s forwards ease-out infinite running;
+}
+
+
+nav li a:hover:not(.active) {
+  background-color: #314941;
+  color: white;
+}
+
+/* FI LLISTA DE NAVEGACIO */
+
+/* PÀGINA RESPONSIVA */
+
+@media only screen and (max-width: 600px) {
+  nav {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  nav ul {
+    display: inline-block;
+    width: 100%;
+    align-items: center;
+    font-size: 2.5vw;
+  }
+
+  nav li a {
+    display: block;
+  }
+}
+
+/* BOTONS FOOTER */
+.fa {
+  height: 3vw;
+  width: 3vw;
+  vertical-align: center;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  padding: 1vw;
+  font-size: 10vw;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+  font-size: 0vw;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+/* FI BOTONS FOOTER */
+
+/* ANIMACIONS */
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+.fadefromleft {
+  animation: arriveLeft 1.5s ease-in-out forwards;
+  position: relative;
+
+}
+
+@keyframes arriveLeft {
+  from {
+    opacity: 0;
+    left: -100vw;
+  }
+
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+.fadefromright {
+  animation: arriveRight 1.5s ease-in-out forwards;
+  position: relative;
+
+}
+
+@keyframes arriveRight {
+  from {
+    opacity: 0;
+    right: -100vw;
+  }
+
+  to {
+    opacity: 1;
+    right: 0;
+  }
+}
