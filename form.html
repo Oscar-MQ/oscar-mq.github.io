@@ -30,7 +30,7 @@
         <article>
             <form class="fade" id="formulari" name="formulari" action="gracies.html" onsubmit="return validarForm();"
                 method="post">
-                <h2>Formulari de Satisfacció de l'Usuari</h2>
+                <h2>Formulari de Reserva de Visites</h2>
                 <fieldset>
                     <legend>Dades del visitant:</legend>
                     <label for="nom">Nom i cognoms:</label><br>
@@ -39,7 +39,6 @@
                     <label for="doc">NIF:</label><br>
                     <input class="fullwidth" type="text" id="doc" name="doc" placeholder="12345678A" maxlength="9"
                         pattern="[XYZ]?[0-9]{7,8}[A-Z]" required><br><br>
-                    <!-- DOC solia ser un <input type="number"> + un <input type="text">, per simplicitat i aplicar patterns, s'han fusionat a un text -->
                     <label for="correu">Correu electrònic:</label><br>
                     <input class="fullwidth" type="email" id="correu" name="correu" placeholder="nom@domini.extensio"
                         pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required><br><br>
@@ -50,11 +49,11 @@
                 </fieldset>
                 <br>
                 <fieldset>
-                    <legend>Qualifica la seva experiència:</legend>
-                    <label for="gaudit">Si he gaudit de la pàgina web</label>
-                    <input type="radio" id="gaudit" name="radiogaudir" value="gaudit"> <br><br>
-                    <label for="nogaudit">No he gaudit de la pàgina web</label>
-                    <input type="radio" id="nogaudit" name="radiogaudir" value="nogaudit">
+                    <legend>Tipus de visita</legend>
+                    <label for="individual">M'agradaria reservar una visita guiada individual</label>
+                    <input type="radio" id="individual" name="radiotour" value="individual"> <br><br>
+                    <label for="grupal">M'agradaria reservar una visita guiada grupal</label>
+                    <input type="radio" id="grupal" name="radiotour" value="grupal">
 
                 </fieldset>
                 <br>
@@ -64,7 +63,7 @@
                     <textarea id="missatge" name="missatge" placeholder="Que ens vols deixar saber?"></textarea>
                 </fieldset>
                 <fieldset class="flex-container">
-                    <legend id="hiddenlegend"></legend>
+                    <legend id="hiddenlegend"><span></span></legend>
                     <button type="submit" id="submit">Enviar formulari</button>
                     <button type="reset" id="reset">Esborrar formulari</button>
                 </fieldset>

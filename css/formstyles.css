@@ -1,10 +1,10 @@
-/* FORMULARI */
-
+/* Canvis visuals generals (Centrar text i mida de lletra)*/
 form {
   text-align: center;
   font-size: 1.8vw;
 }
 
+/* Canvis especifics visuals de cada element (Marges, padding, mesures...)*/
 label {
   padding-bottom: 1vw;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -46,7 +46,7 @@ legend {
   resize: vertical;
 }
 
-/* BUTTONS */
+/* Decorar els botons (Padding, colors i hover) */
 button {
   flex: 1;
   margin: 0.1vw;
@@ -72,17 +72,13 @@ button[type="reset"]:hover {
   background-color: rgb(255, 90, 105);
 }
 
-/* FI BUTTONS */
-
 /* Per amagar la llegenda del Fieldset amb els botons */
 #hiddenlegend {
   position: absolute;
   overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
   width: 1px;
   height: 1px;
   white-space: nowrap;
-  border: 0;
-  background-color: rgb(230, 220, 255);
 }
-
-/* FI FORMULARI */

@@ -1,33 +1,8 @@
-// COMPROVAR CONTRASENYES
-// FUNCIO COMPLETAMENT OBSOLETA PER PATTERNS
-// function validaContra(pass) {
-//alert('Contrasenya '+pass);
-//if (pass.length < 6) {
-//    alert('Contrasenya massa curta');
-//    return false;
-// } else {
-//    alert('Contrasenya correcta');
-//    return true;
-// }
-// }
-
-//var dni = doc
-// JAVASCRIPT OBSOLET PER PATTERNS | var expressio_regular_dni = /^[XYZ]?\d{5,8}[A-Z]$/;
-// JAVASCRIPT OBSOLET PER PATTERNS | dni = dni.toUpperCase();
-
-// var nom = document.forms["formulari"]["nom"].value;
-// var nom = document.getElementByName("nom")[0].value; //per name="nom"
-// JAVASCRIPT OBSOLET PER PATTERNS | var pass = document.getElementById("pass").value;
-// JAVASCRIPT OBSOLET PER PATTERNS | if (validaContra(pass) && validaDOC(doc)) {
-
-
-// ACCEPTAR NIEs
+// VERIFICAR DNIs/NIEs
 function validaDOC() {
-
     var dni = document.getElementById("doc").value;
     var num, ultima_lletra, lletra;
     var expressio_regular_dni = /[XYZ]?[0-9]{7,8}[A-Z]/;
-
     if (expressio_regular_dni.test(dni) === true) {
         num = dni.substr(0, dni.length - 1);
         num = num.replace('X', 0);
@@ -48,12 +23,11 @@ function validaDOC() {
         alert('DOCUMENT erroni, format no vàlid');
         return false;
     }
-
 }
 
 // VALIDAR FORM
 function validarForm() {
-    var nom = document.getElementById("nom").value; //per id="nom"
+    var nom = document.getElementById("nom").value;
     var doc = document.getElementById("doc").value;
     alert("Comencem a validar ..." + nom + " " + doc);
     if (validaDOC(doc)) {

@@ -1,8 +1,10 @@
+/* Limitar contingut a les capses/voreres */
 * {
   box-sizing: border-box;
   border-collapse: collapse;
 }
 
+/* Imatge de fons al cos */
 body {
   margin: 0;
   background-image: url("../imatges/BodyBG.png");
@@ -11,6 +13,7 @@ body {
   background-repeat: repeat;
 }
 
+/* Estil per defecte de header, footer i section */
 header,
 footer,
 section {
@@ -19,11 +22,13 @@ section {
   border: 0.2vw solid teal;
 }
 
+/* Imatge de fons per header */
 header {
   background-image: url("../imatges/indexheaderbg.jpg");
   background-size: 100%;
 }
 
+/* Estils del diferents texts capçalera */
 header h1 {
   text-align: center;
   font-size: 10vw;
@@ -32,8 +37,6 @@ header h1 {
   margin-bottom: 0.3vw;
   color: #29eea6;
   text-shadow: 8px 8px 3px #024129;
-  /* color: white;
-  text-shadow: 8px 8px 3px #04AA6D; */
 }
 
 header h3 {
@@ -43,8 +46,6 @@ header h3 {
   font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: #29eea6;
   text-shadow: 4px 4px 1px #024129;
-  /* color: white;
-  text-shadow: 4px 4px 1px #04AA6D; */
 }
 
 h2 {
@@ -57,42 +58,44 @@ h3 {
   text-align: center;
 }
 
-article li {
-  font-size: 2vw;
-  margin-bottom: 0.5vw;
-  text-align: left;
-}
-
+/* Nav i Article un al costat a l'altre (i estils) */
 section {
   display: flex;
   flex-wrap: wrap;
 }
 
-nav {
-  /*H*/
-  flex: 100%;
-  /*H*/
-  display: flex;
-  background-image: linear-gradient(to bottom, rgb(150, 255, 180), rgb(150, 255, 250));
-  text-align: center;
-  border: 0.1vw solid teal;
-}
-
 article {
-  /*H*/
   flex: 100%;
   background-color: rgb(230, 255, 240);
   border: 0.1vw solid teal;
   padding: 1.2vw;
   font-size: 1.8vw;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
 }
 
+article li {
+  font-size: 2vw;
+  margin-bottom: 0.5vw;
+  text-align: left;
+}
+
+nav {
+  flex: 100%;
+  display: flex;
+  background-image: linear-gradient(to bottom, rgb(150, 255, 180), rgb(150, 255, 250));
+  text-align: center;
+  border: 0.1vw solid teal;
+}
+
+/* Establir mides per defecte d'imatges */
 img {
   width: 100%;
   height: 100%;
 }
 
+/* FOOTER */
+/* Estils */
 footer {
   text-align: center;
   color: white;
@@ -107,6 +110,7 @@ footer p {
   font-size: 1.8vw;
 }
 
+/* Text amb enllaç canvia de color */
 article a {
   color: rgb(90, 60, 146);
 }
@@ -116,9 +120,11 @@ a:hover {
   color: whitesmoke;
 }
 
+/* FI FOOTER */
+
+/* Dividir l'article de index.html en 2 parts iguals */
 .articlesplit {
   flex: 1;
-  /* width: 45%; */
 }
 
 .splitindex {
@@ -130,26 +136,19 @@ a:hover {
   border-radius: 3vw;
 }
 
+/* Titols del article de plats.html */
 .gastrotitles {
   text-align: left;
   padding-left: 3vw;
 }
 
-.inlinegallery {
-  text-align: center;
-}
-
-.inlinegallery img {
-  width: 24%;
-  height: auto;
-  border: 0.2vw solid teal;
-}
-
+/* Definir elements pare amb flex per quan necessitem dividir espai (Nav i Article) */
 .flex-container {
   display: flex;
   flex-wrap: wrap;
 }
 
+/* Icone de l'escut de Llorenç al header */
 #escuticon {
   float: right;
   margin-top: -1vw;
@@ -159,14 +158,12 @@ a:hover {
   
 }
 
-/* LLISTA DE NAVEGACIO */
+/* Llista de navegacio horizontal */
 nav ul {
-  /*H*/
   display: flex;
   list-style-type: none;
   margin: 1.2vw;
   padding: 0;
-  /*H*/
   width: 100%;
   background-color: rgb(210, 230, 220);
   font-family: 'Trebuchet MS', 'Gill Sans', sans-serif;
@@ -177,14 +174,11 @@ nav ul {
 }
 
 nav li {
-  /*H*/
   flex: 20%;
 }
 
 nav li a {
-  /*H*/
   width: 100%;
-  /*H*/
   display: inline-block;
   border: 0.15vw solid teal;
   color: #000;
@@ -204,11 +198,10 @@ nav li a:hover:not(.active) {
   color: white;
 }
 
-/* FI LLISTA DE NAVEGACIO */
 
 /* PÀGINA RESPONSIVA */
-
 @media only screen and (max-width: 600px) {
+  /* Llista de navegacio vertical */
   nav {
     padding-left: 10%;
     padding-right: 10%;
@@ -224,9 +217,18 @@ nav li a:hover:not(.active) {
   nav li a {
     display: block;
   }
+
+  /* Els blocs dividits per la meitat ara van apilats un sobre l'altre */
+  .flex-container {
+    display: inline-block;
+  }
+
+  .articlesplit {
+    width: 100%;
+  }
 }
 
-/* BOTONS FOOTER */
+/* BOTONS XARXES SOCIALS FOOTER */
 .fa {
   height: 3vw;
   width: 3vw;
@@ -256,7 +258,7 @@ nav li a:hover:not(.active) {
 /* FI BOTONS FOOTER */
 
 /* ANIMACIONS */
-
+/* Invisible a esvaint-se */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
@@ -272,16 +274,18 @@ nav li a:hover:not(.active) {
   }
 }
 
+/* Esvaint-se i arrivant del costat esquerre */
 .fadefromleft {
   animation: arriveLeft 1.5s ease-in-out forwards;
   position: relative;
-
+  overflow: hidden;
 }
 
 @keyframes arriveLeft {
   from {
     opacity: 0;
     left: -100vw;
+    overflow: hidden;
   }
 
   to {
@@ -290,9 +294,11 @@ nav li a:hover:not(.active) {
   }
 }
 
+/* Esvaint-se i arrivant del costat dret */
 .fadefromright {
   animation: arriveRight 1.5s ease-in-out forwards;
   position: relative;
+  overflow: hidden;
 
 }
 
@@ -300,10 +306,14 @@ nav li a:hover:not(.active) {
   from {
     opacity: 0;
     right: -100vw;
+    overflow: hidden;
   }
 
   to {
     opacity: 1;
     right: 0;
+
   }
 }
+
+/* FI ANIMACIONS */

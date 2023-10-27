@@ -1,3 +1,4 @@
+/* Columnes duals d'imatges amb efectes (Hover)*/
 .imagesplit {
   width: 49%;
   display: inline-block;
@@ -6,6 +7,7 @@
   padding: 0.3vw;
 }
 
+/* Imatges borroses per defecte */
 .imagesplit img {
   width: 100%;
   filter: blur(1px) sepia(20%);
@@ -14,21 +16,20 @@
   border: 0.5vw solid teal;
 }
 
+/* Imatges clares al seleccionar-les */
 .imagesplit img:hover {
   filter: blur(0px) sepia(0%);
   transition-duration: 0.3s;
   padding: 0%;
 }
 
-/* SLIDESHOWS */
-
+/* SLIDESHOWS (Galeries amb fletxes)*/
 .mySlides {
   display: none
 }
 
 .mySlides img {
   border: 0.6vw solid teal;
-
 }
 
 .slideshow-container {
@@ -38,6 +39,7 @@
   margin: auto;
 }
 
+/* Fletxes Slideshows */
 .prev,
 .next {
   cursor: pointer;
@@ -64,6 +66,7 @@
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* Text alternatiu Slideshows */
 .text {
   color: #f2f2f2;
   background-color: black;
@@ -77,6 +80,7 @@
   text-align: center;
 }
 
+/* Llista del punts Slideshows */
 .dot {
   cursor: pointer;
   height: 1vw;
