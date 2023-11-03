@@ -13,14 +13,14 @@ function validaDOC() {
         lletra = 'TRWAGMYFPDXBNJZSQVHLCKET';
         lletra = lletra.substring(num, num + 1);
         if (lletra != ultima_lletra) {
-            alert('DOCUMENT erroni, la lletra no se correspon')
+            alert('DNI/NIE incorrecte! La lletra no correspon!')
             return false;
         } else {
-            alert('DOCUMENT correcte');
+            alert('DNI/NIE correcte!');
             return true;
         }
     } else {
-        alert('DOCUMENT erroni, format no vàlid');
+        alert('DNI/NIE incorrent, format no vàlid');
         return false;
     }
 }
@@ -29,7 +29,7 @@ function validaDOC() {
 function validarForm() {
     var nom = document.getElementById("nom").value;
     var doc = document.getElementById("doc").value;
-    alert("Comencem a validar ..." + nom + " " + doc);
+    alert("Validant les dades," + nom);
     if (validaDOC(doc)) {
         alert("Tot Correcte, envie'm el teu formulari. Gràcies " + nom);
         document.getElementById("formulari").submit();
