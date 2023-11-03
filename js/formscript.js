@@ -29,9 +29,9 @@ function validaDOC() {
 function validarForm() {
     var nom = document.getElementById("nom").value;
     var doc = document.getElementById("doc").value;
-    alert("Validant les dades," + nom);
+    alert("Validant les dades, " + nom);
     if (validaDOC(doc)) {
-        alert("Tot Correcte, envie'm el teu formulari. Gràcies " + nom);
+        alert("Totes les dades són correctes, enviant formulari... Gràcies " + nom);
         document.getElementById("formulari").submit();
         return true;
     } else {
